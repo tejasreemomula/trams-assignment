@@ -37,6 +37,11 @@ body {
   .hero-image-float {
     animation: none;
   }
+
+  .arrow-draw {
+    clip-path: none !important;
+    animation: none !important;
+  }
 }
 
 /* Gentle floating animation for hero cards */
@@ -64,4 +69,41 @@ body {
 @theme {
   --font-satoshi: "Satoshi", sans-serif;
   --font-gerbil: "Gerbil", sans-serif;
+}
+
+/* ── Arrow scribble draw effect (top to bottom) ── */
+@keyframes drawTopToBottom {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.arrow-draw {
+  clip-path: inset(0 0 100% 0);
+}
+
+.arrow-draw.is-visible {
+  animation: drawTopToBottom 1s ease-out forwards;
+}
+
+/* ── Subscribe button hover ── */
+.footer-subscribe-btn {
+  background-color: #000000;
+  color: #ffffff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+  cursor: pointer;
+}
+
+.footer-subscribe-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+  color: #000000;
 }

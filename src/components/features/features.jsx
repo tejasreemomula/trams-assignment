@@ -1,7 +1,7 @@
 import GreenPill from "../GreenPill";
+import DrawScribble from "../DrawScribble";
 import featureImg from "../../assets/features/feature-img.png";
 import featureImg2 from "../../assets/features/features-img-2.png";
-import featureScribble from "../../assets/features/feature-scribble.svg";
 import featureScribble1 from "../../assets/features/feature-scribble-1.svg";
 import featureSquare from "../../assets/features/feature-square.svg";
 import featureTriangle from "../../assets/features/feature-triangle.svg";
@@ -39,15 +39,14 @@ const Features = () => {
           gap: "clamp(24px, 4vw, 64px)",
         }}
       >
-        <img
-          src={featureScribble}
-          alt=""
-          className="pointer-events-none absolute left-195 top-114 z-[-1] -translate-x-1/2 -translate-y-1/2 opacity-100"
+        <DrawScribble
+          className="pointer-events-none absolute left-195 top-114 z-[-1] -translate-x-1/2 -translate-y-1/2"
           style={{
             width: "949px",
             height: "auto",
             maxWidth: "none",
           }}
+          duration={2200}
         />
         <img
           src={featureScribble1}

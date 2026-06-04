@@ -1,9 +1,40 @@
+import { useEffect, useRef, useState } from "react";
 import FooterNavColumn from "./footerNavColumn";
 import { footerNavSections } from "../../constants/data";
 import arrowscribble from "../../assets/footer/arrow-scribble.svg";
 import semicircle from "../../assets/footer/footer-semi-circle.svg";
 
 const FooterCTA = () => {
+  const [arrowVisible, setArrowVisible] = useState(false);
+  const arrowContainerRef = useRef(null);
+
+  useEffect(() => {
+    const el = arrowContainerRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReducedMotion) {
+      setArrowVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setArrowVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       className="relative w-full overflow-hidden py-8 md:py-10 lg:py-8"
@@ -16,17 +47,19 @@ const FooterCTA = () => {
           minHeight: "clamp(420px, 72vw, 1297px)",
         }}
       >
-        <img
-          src={arrowscribble}
-          alt=""
-          className="pointer-events-none absolute left-124 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 opacity-100"
-        />
-
-        <img
-          src={arrowscribble}
-          alt=""
-          className="pointer-events-none absolute left-140 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 opacity-100"
-        />
+        <div ref={arrowContainerRef} className="pointer-events-none absolute inset-0">
+          <img
+            src={arrowscribble}
+            alt=""
+            className={`arrow-draw absolute left-124 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 ${arrowVisible ? "is-visible" : ""}`}
+          />
+          <img
+            src={arrowscribble}
+            alt=""
+            className={`arrow-draw absolute left-140 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 ${arrowVisible ? "is-visible" : ""}`}
+            style={arrowVisible ? { animationDelay: "0.5s" } : {}}
+          />
+        </div>
 
         <img
           src={semicircle}
@@ -60,17 +93,15 @@ const FooterCTA = () => {
           </p>
 
           <button
-            className="font-satoshi font-bold text-white"
+            className="footer-subscribe-btn font-satoshi font-bold"
             style={{
               width: "clamp(160px, 20vw, 213px)",
               height: "clamp(52px, 6vw, 60px)",
               borderRadius: "100px",
-              background: "#000000",
               fontSize: "clamp(14px, 2.5vw, 20px)",
               lineHeight: "clamp(24px, 3.5vw, 30px)",
               letterSpacing: "0px",
               marginTop: "clamp(24px, 3vw, 40px)",
-              cursor: "pointer",
               border: "none",
               outline: "none",
             }}

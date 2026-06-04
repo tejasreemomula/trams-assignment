@@ -51,12 +51,15 @@ const Testimonials = () => {
             &nbsp;our customer
             <br />
             <span className="relative inline-block">
-              says About Us
-              <img
-                src={scribbleLine}
-                alt=""
-                className="pointer-events-none absolute left-1/2 top-[1.02em] -z-10 h-auto w-[clamp(170px,18vw,260px)] -translate-x-1/2 opacity-100"
-              />
+              says{" "}
+              <span className="relative whitespace-nowrap">
+                About Us
+                <img
+                  src={scribbleLine}
+                  alt=""
+                  className="pointer-events-none absolute left-1/2 top-[1.1em] -z-10 h-auto w-[clamp(260px,28vw,420px)] -translate-x-1/2 opacity-100"
+                />
+              </span>
             </span>
           </h2>
         </Reveal>
