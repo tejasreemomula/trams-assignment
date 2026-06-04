@@ -19,7 +19,10 @@ const Hero = () => {
       {/* Centered text content with responsive padding */}
       <div className="relative flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-77 pt-12 xl:pt-16">
         <h1 className="mx-auto max-w-full text-center font-gerbil text-[clamp(38px,5.2vw,96px)] font-normal leading-[1.26] tracking-normal">
-          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+          <span
+            className="flex w-full justify-center whitespace-nowrap text-center"
+            style={{ gap: "0.45em" }}
+          >
             The
             <span className="relative z-10 inline-block">
               thinkers
@@ -31,7 +34,10 @@ const Hero = () => {
             </span>
             and
           </span>
-          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+          <span
+            className="flex w-full justify-center whitespace-nowrap text-center"
+            style={{ gap: "0.6em" }}
+          >
             doers were
             <span className="relative z-10 inline-block">
               changing
@@ -46,12 +52,15 @@ const Hero = () => {
               />
             </span>
           </span>
-          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+          <span
+            className="flex w-full justify-center whitespace-nowrap text-center"
+            style={{ gap: "0.45em" }}
+          >
             the
             <span className="relative z-10 inline-block">
               status
               <GreenPill
-                width="clamp(120px, 24vw, 300px)"
+                width="clamp(120px, 22vw, 300px)"
                 height="clamp(46px, 10vw, 84px)"
                 className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
               />

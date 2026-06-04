@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const PinkPill = ({
-  width = 207,
-  height = 70,
+  width = "20vw",
+  height = "7vw",
   className = "",
   style = {},
 }) => {
