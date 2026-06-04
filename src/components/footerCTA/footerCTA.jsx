@@ -86,8 +86,8 @@ const FooterCTA = () => {
           </h2>
 
           <p
-            className="mt-4 font-satoshi text-[clamp(16px,2vw,16px)] leading-normal text-black"
-            style={{ maxWidth: "680px" }}
+            className="mt-4 font-satoshi text-[clamp(14px,1.5vw,20px)] leading-normal text-black"
+            style={{ maxWidth: "clamp(480px, 50vw, 800px)" }}
           >
             To make your stay special and even more memorable
           </p>
@@ -113,7 +113,7 @@ const FooterCTA = () => {
         <div
           className="mx-auto h-px w-full bg-[#000000]"
           style={{
-            maxWidth: "1000px",
+            maxWidth: "clamp(600px, 70vw, 1200px)",
             marginTop: "clamp(32px, 4vw, 48px)",
           }}
         />
@@ -121,7 +121,7 @@ const FooterCTA = () => {
         <div
           className="flex w-full flex-wrap items-start justify-between gap-y-8 px-4 sm:px-8 lg:px-0"
           style={{
-            maxWidth: "1000px",
+            maxWidth: "clamp(600px, 70vw, 1200px)",
             marginTop: "clamp(32px, 4vw, 48px)",
           }}
         >
@@ -135,8 +135,8 @@ const FooterCTA = () => {
         </div>
       </div>
       <p
-        className="mx-auto -mt-12 text-center font-satoshi text-[clamp(14px,1.4vw,12px)] leading-normal text-black"
-        style={{ maxWidth: "455px" }}
+        className="mx-auto -mt-12 text-center font-satoshi text-[clamp(12px,1.2vw,16px)] leading-normal text-black"
+        style={{ maxWidth: "clamp(300px, 30vw, 600px)" }}
       >
         ©2023 Elementum. All rights reserved
       </p>

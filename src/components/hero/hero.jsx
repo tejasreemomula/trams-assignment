@@ -19,8 +19,8 @@ const Hero = () => {
       {/* Centered text content with responsive padding */}
       <div className="relative flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-77 pt-12 xl:pt-16">
         <h1 className="mx-auto max-w-full text-center font-gerbil text-[clamp(38px,5.2vw,96px)] font-normal leading-[1.26] tracking-normal">
-          <span className="block w-full whitespace-nowrap text-center">
-            The{" "}
+          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+            The
             <span className="relative z-10 inline-block">
               thinkers
               <img
@@ -28,11 +28,11 @@ const Hero = () => {
                 alt=""
                 className="absolute left-1/2 top-[1.1em] -z-10 h-auto w-[clamp(150px,28vw,594px)] -translate-x-1/2"
               />
-            </span>{" "}
+            </span>
             and
           </span>
-          <span className="block w-full whitespace-nowrap text-center">
-            doers were{" "}
+          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+            doers were
             <span className="relative z-10 inline-block">
               changing
               <PinkPill
@@ -46,8 +46,8 @@ const Hero = () => {
               />
             </span>
           </span>
-          <span className="block w-full whitespace-nowrap text-center">
-            the{" "}
+          <span className="flex w-full justify-center whitespace-nowrap text-center" style={{ gap: "0.3em" }}>
+            the
             <span className="relative z-10 inline-block">
               status
               <GreenPill
@@ -55,7 +55,7 @@ const Hero = () => {
                 height="clamp(46px, 10vw, 84px)"
                 className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
               />
-            </span>{" "}
+            </span>
             Quo with
           </span>
         </h1>
@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
 
       {/* Image container - proportional absolute positioning (scales responsively) */}
-      <div className="px-4 sm:px-8 lg:px-16 xl:px-0 mt-10 xl:mt-16">
+      <div className="px-4 sm:px-8 lg:px-16 xl:px-20 mt-10 xl:mt-16">
         <div className="max-w-461 mx-auto">
           <div className="relative w-full aspect-1844/453">
             {/* pic-1: page(996,38) → rel(195,0) → top:43.05% left:0% */}

@@ -11,7 +11,7 @@ const FooterNavColumn = ({ title, links }) => {
         className="font-gerbil font-normal text-black"
         style={{
           whiteSpace: "nowrap",
-          fontSize: "clamp(16px, 1.8vw, 16px)",
+          fontSize: "clamp(16px, 1.5vw, 22px)",
           lineHeight: "clamp(24px, 2.5vw, 30px)",
           letterSpacing: "0px",
           marginBottom: "clamp(16px, 2vw, 24px)",
@@ -30,7 +30,7 @@ const FooterNavColumn = ({ title, links }) => {
               display: "block",
               width: "100%",
               padding: "4px 0",
-              fontSize: "clamp(14px, 1.4vw, 14px)",
+              fontSize: "clamp(12px, 1.2vw, 16px)",
               lineHeight: "clamp(22px, 2vw, 30px)",
               letterSpacing: "0px",
             }}
