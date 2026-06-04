@@ -1,4 +1,6 @@
 import scribbleLine from "../../assets/hero/scrible-line.svg";
+import orangeScribble from "../../assets/hero/orange-scribble.svg";
+import blackScribble from "../../assets/hero/black-scrible.svg";
 import pic1 from "../../assets/hero/pic-1.png";
 import pic2 from "../../assets/hero/pic-2.png";
 import pic3 from "../../assets/hero/pic-3.png";
@@ -10,9 +12,9 @@ import pic8 from "../../assets/hero/pic-8.png";
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-100 relative bg-white overflow-hidden pb-12 sm:pb-16 xl:pb-20">
+    <section className="w-full min-h-100 relative  overflow-hidden pb-12 sm:pb-16 xl:pb-20">
       {/* Centered text content with responsive padding */}
-      <div className="flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-77 pt-12 xl:pt-16">
+      <div className="relative flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-77 pt-12 xl:pt-16">
         <h1 className="font-gerbil font-normal text-[36px] sm:text-[48px] md:text-[64px] lg:text-[64px] xl:text-[100px] leading-[1.26] tracking-normal max-w-333">
           The{" "}
           <span className="relative z-10">
@@ -29,6 +31,29 @@ const Hero = () => {
           <br />
           the status Quo with
         </h1>
+
+        <img
+          src={orangeScribble}
+          alt=""
+          className="pointer-events-none absolute"
+          style={{
+            width: "358px",
+            height: "257px",
+            top: "280.5px",
+            left: "-160.5px",
+          }}
+        />
+        <img
+          src={blackScribble}
+          alt=""
+          className="pointer-events-none absolute"
+          style={{
+            width: "347px",
+            height: "257px",
+            top: "280.5px",
+            left: "-120.5px",
+          }}
+        />
 
         <p className="font-satoshi font-normal text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-normal max-w-207.75 mt-6 xl:mt-8">
           We are a team of strategists, designers communicators, researchers.

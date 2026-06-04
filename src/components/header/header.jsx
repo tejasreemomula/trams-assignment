@@ -9,7 +9,7 @@ const NAV_LINKS = [
 
 const Header = () => {
   return (
-    <header className="w-full h-[100px] flex items-center justify-between bg-white px-4 sm:px-8 lg:px-[160px]">
+    <header className="w-full h-[100px] flex items-center justify-between  px-4 sm:px-8 lg:px-[160px]">
       {/* Brand - Elementum */}
       <div className="w-[201px] h-[46px] font-gerbil text-[28px] font-normal leading-[46px] text-center tracking-normal shrink-0 ">
         Elementum
