@@ -1,11 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const GreenPill = ({
-  width = 207,
-  height = 70,
-  className = "",
-  style = {},
-}) => {
+const Reveal = ({ children, className = "", delay = 0, y = 24, style = {} }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -30,7 +25,7 @@ const GreenPill = ({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
     );
 
     observer.observe(element);
@@ -41,14 +36,16 @@ const GreenPill = ({
   return (
     <div
       ref={ref}
-      className={`pill-reveal ${isVisible ? "is-visible" : ""} pointer-events-none absolute rounded-[100px] bg-[#D7EEDD] ${className}`}
+      className={`reveal-on-scroll ${isVisible ? "is-visible" : ""} ${className}`}
       style={{
-        width: typeof width === "number" ? `${width}px` : width,
-        height: typeof height === "number" ? `${height}px` : height,
+        "--reveal-delay": `${delay}ms`,
+        "--reveal-y": `${y}px`,
         ...style,
       }}
-    />
+    >
+      {children}
+    </div>
   );
 };
 
-export default GreenPill;
+export default Reveal;

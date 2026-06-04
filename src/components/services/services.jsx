@@ -1,6 +1,7 @@
 import GreenPill from "../GreenPill";
 import scribbleLine from "../../assets/hero/scrible-line.svg";
 import ServiceCard from "./serviceCard";
+import Reveal from "../Reveal";
 
 const services = [
   {
@@ -24,19 +25,23 @@ const Services = () => {
         className="mx-auto flex w-full flex-col px-4 sm:px-8 lg:px-16"
         style={{ maxWidth: "1618px" }}
       >
-        <div
+        <Reveal
           className="mb-12 pl-1 text-left sm:pl-2 lg:pl-4"
-          style={{ maxWidth: "869px" }}
+          style={{
+            maxWidth: "869px",
+            transform: "translateX(clamp(12px, 3vw, 48px))",
+          }}
+          y={20}
         >
           <h2
-            className="font-gerbil text-[clamp(30px,3vw,56px)] leading-[1.04] text-black"
+            className="font-gerbil text-[clamp(44px,3.8vw,72px)] leading-[1.04] text-black"
             style={{ maxWidth: "700px" }}
           >
             What we{" "}
             <span className="relative inline-block">
               can
               <GreenPill
-                width="clamp(100px, 8vw, 262px)"
+                width="clamp(130px, 8vw, 262px)"
                 height="clamp(48px, 2vw, 92px)"
                 className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
               />
@@ -52,7 +57,7 @@ const Services = () => {
             </span>{" "}
             you!
           </h2>
-        </div>
+        </Reveal>
         <div
           className="mx-auto mb-4 h-px w-full bg-[#B1B1B1]"
           style={{ maxWidth: "1600px" }}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const GreenPill = ({
+const PinkPill = ({
   width = 207,
   height = 70,
   className = "",
@@ -41,7 +41,7 @@ const GreenPill = ({
   return (
     <div
       ref={ref}
-      className={`pill-reveal ${isVisible ? "is-visible" : ""} pointer-events-none absolute rounded-[100px] bg-[#D7EEDD] ${className}`}
+      className={`pill-reveal ${isVisible ? "is-visible" : ""} pointer-events-none absolute rounded-[100px] bg-[#FFC2EA] ${className}`}
       style={{
         width: typeof width === "number" ? `${width}px` : width,
         height: typeof height === "number" ? `${height}px` : height,
@@ -51,4 +51,4 @@ const GreenPill = ({
   );
 };
 
-export default GreenPill;
+export default PinkPill;

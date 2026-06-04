@@ -1,3 +1,5 @@
+import hamburgerIcon from "../../assets/hero/hamburger.svg";
+
 const NAV_LINKS = [
   "Home",
   "Features",
@@ -9,14 +11,12 @@ const NAV_LINKS = [
 
 const Header = () => {
   return (
-    <header className="w-full h-[100px] flex items-center justify-between  px-4 sm:px-8 lg:px-[160px]">
-      {/* Brand - Elementum */}
-      <div className="w-[201px] h-[46px] font-gerbil text-[28px] font-normal leading-[46px] text-center tracking-normal shrink-0 ">
+    <header className="flex min-h-[64px] w-full items-center justify-between gap-4 px-4 py-2 sm:min-h-[72px] sm:px-8 md:gap-6 lg:min-h-[72px] lg:px-[120px] xl:px-[160px]">
+      <div className="w-auto min-w-[128px] shrink-0 text-left font-gerbil text-[clamp(20px,4.5vw,22px)] font-normal leading-[1.64] tracking-normal sm:min-w-[160px] md:text-center lg:min-w-[201px]">
         Elementum
       </div>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-8">
+      <nav className="hidden min-w-0 items-center gap-4 md:flex lg:gap-6 xl:gap-8">
         {NAV_LINKS.map((link) => (
           <a
             key={link}
@@ -28,10 +28,17 @@ const Header = () => {
         ))}
       </nav>
 
-      {/* Right Icon */}
-      <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity shrink-0">
-        {/* Icon */}
-      </div>
+      <button
+        type="button"
+        aria-label="Open menu"
+        className="flex h-[clamp(28px,5vw,36px)] w-[clamp(28px,5vw,36px)] shrink-0 cursor-pointer items-center justify-center transition-opacity hover:opacity-80"
+      >
+        <img
+          src={hamburgerIcon}
+          alt=""
+          className="h-auto w-[clamp(22px,4vw,30px)]"
+        />
+      </button>
     </header>
   );
 };

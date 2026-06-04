@@ -9,6 +9,7 @@ import img6 from "../../assets/testimonals/img-6.png";
 import img7 from "../../assets/testimonals/img-7.png";
 import img8 from "../../assets/testimonals/img-8.png";
 import TestimonialCard from "./testimonialCard";
+import Reveal from "../Reveal";
 
 const imageStyles = [
   { src: img1, width: "clamp(68px, 7vw, 125px)", left: "6.7%", top: "-18.9%" },
@@ -33,15 +34,16 @@ const Testimonials = () => {
         className="mx-auto flex w-full flex-col items-center px-4 text-center sm:px-8 lg:px-16"
         style={{ maxWidth: "1844px" }}
       >
-        <div
+        <Reveal
           className="w-full"
           style={{ maxWidth: "685px", minHeight: "149px" }}
+          y={18}
         >
           <h2 className="font-gerbil text-[clamp(32px,8vw,48px)] leading-[1.18] text-black">
             <span className="relative inline-block">
               What
               <GreenPill
-                width="clamp(80px, 12vw, 207px)"
+                width="clamp(80px, 14vw, 207px)"
                 height="clamp(28px, 4vw, 70px)"
                 className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
               />
@@ -57,7 +59,7 @@ const Testimonials = () => {
               />
             </span>
           </h2>
-        </div>
+        </Reveal>
 
         <div
           className="relative mt-6 w-full"

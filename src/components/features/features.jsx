@@ -6,6 +6,7 @@ import featureScribble1 from "../../assets/features/feature-scribble-1.svg";
 import featureSquare from "../../assets/features/feature-square.svg";
 import featureTriangle from "../../assets/features/feature-triangle.svg";
 import scribbleLine from "../../assets/hero/scrible-line.svg";
+import readmoreArrow from "../../assets/features/readmore-arrow.svg";
 
 const Features = () => {
   return (
@@ -51,12 +52,12 @@ const Features = () => {
         <img
           src={featureScribble1}
           alt=""
-          className="pointer-events-none absolute -right-50 z-[-1] opacity-100"
+          className="pointer-events-none absolute -right-30 z-[-1] opacity-100"
           style={{
-            width: "clamp(400px, 76vw, 1440px)",
+            width: "clamp(600px, 76vw, 1440px)",
             height: "clamp(200px, 34vw, 698px)",
             maxWidth: "100%",
-            top: "clamp(500px, 40vw, 1800px)",
+            top: "clamp(600px, 40vw, 2200px)",
             transform: "rotate(-3.88deg)",
             transformOrigin: "center center",
           }}
@@ -73,14 +74,17 @@ const Features = () => {
           <div
             className="min-w-0 flex-1 basis-[320px]"
             style={{
-              maxWidth: "720px",
+              maxWidth: "820px",
               minHeight: "220px",
-              marginLeft: "clamp(-4px, -0.5vw, 0px)",
+              marginLeft: "clamp(-44px, -3vw, -12px)",
             }}
           >
             <h2
               className="font-gerbil text-[clamp(28px,3.3vw,56px)] leading-[1.1] text-black"
-              style={{ maxWidth: "800px" }}
+              style={{
+                lineHeight: "clamp(32px, 8vw, 54px)",
+                maxWidth: "800px",
+              }}
             >
               <span className="relative inline-block">
                 Tomorrow
@@ -105,12 +109,23 @@ const Features = () => {
 
             <p
               className="mt-4 font-satoshi text-[clamp(14px,1.15vw,24px)] leading-normal text-black"
-              style={{ maxWidth: "455px" }}
+              style={{ maxWidth: "620px" }}
             >
               We are a team of strategists, designers communicators,
               researchers. Togeather, we belive that progress only happens when
               you refuse to play things safe.
             </p>
+
+            <div className="mt-6 inline-flex items-center gap-4 whitespace-nowrap opacity-100">
+              <span className="font-satoshi text-[16px] font-medium leading-[24px] tracking-normal text-black cursor-pointer">
+                Read more
+              </span>
+              <img
+                src={readmoreArrow}
+                alt=""
+                className="h-auto w-[clamp(42px,8vw,78px)] shrink-0 translate-y-[2px]"
+              />
+            </div>
           </div>
           <div
             className="relative ml-auto flex w-full shrink-0 justify-end xl:w-auto"
@@ -220,6 +235,17 @@ const Features = () => {
               makers to accelerate their progress in areas such as brand, design
               digital, comms and social research.
             </p>
+
+            <div className="mt-6 inline-flex items-center gap-4 whitespace-nowrap opacity-100">
+              <span className="font-satoshi text-[16px] font-medium leading-[24px] tracking-normal text-black cursor-pointer">
+                Read more
+              </span>
+              <img
+                src={readmoreArrow}
+                alt=""
+                className="h-auto w-[clamp(42px,8vw,78px)] shrink-0 translate-y-[2px]"
+              />
+            </div>
           </div>
         </div>
       </div>

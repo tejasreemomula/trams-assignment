@@ -13,6 +13,54 @@ body {
   overflow-x: hidden;
 }
 
+.pill-reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transition:
+    opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, filter;
+}
+
+.pill-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill-reveal {
+    opacity: 1;
+    filter: none;
+    transition: none;
+  }
+
+  .hero-image-float {
+    animation: none;
+  }
+}
+
+/* Gentle floating animation for hero cards */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(4px) rotate(-0.3deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(0.2deg);
+  }
+}
+
+.hero-image-float {
+  animation: float var(--float-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+  will-change: transform;
+}
+
 @theme {
   --font-satoshi: "Satoshi", sans-serif;
   --font-gerbil: "Gerbil", sans-serif;
