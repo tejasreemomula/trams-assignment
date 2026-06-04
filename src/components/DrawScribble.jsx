@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const DrawScribble = ({ className = "", style = {}, duration = 2200 }) => {
+const DrawScribble = ({ className = "", style = {} }) => {
   const pathRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -15,49 +15,50 @@ const DrawScribble = ({ className = "", style = {}, duration = 2200 }) => {
 
     if (prefersReducedMotion) {
       path.style.strokeDasharray = "none";
-      path.style.strokeDashoffset = "0";
       return;
     }
 
     const length = path.getTotalLength();
-    let animFrameId = null;
-    let started = false;
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
+    function update() {
+      const rect = container.getBoundingClientRect();
+      const viewportH = window.innerHeight;
 
-        // Animate strokeDasharray from 0 → length (start-to-end draw)
-        const startTime = performance.now();
+      // Clamp progress: 0 when section enters from bottom, 1 when it exits at top
+      const progress = Math.max(
+        0,
+        Math.min(1, (viewportH - rect.top) / (viewportH + rect.height)),
+      );
 
-        function frame(time) {
-          if (!started) {
-            started = true;
-            // First frame: ensure path is hidden
-            path.style.strokeDasharray = "0 " + String(length);
-          }
-          const elapsed = time - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          path.style.strokeDasharray =
-            String(progress * length) + " " + String(length);
-          if (progress < 1) {
-            animFrameId = requestAnimationFrame(frame);
-          }
-        }
+      path.style.strokeDasharray = String(progress * length) + " " + String(length);
+      ticking = false;
+    }
 
-        requestAnimationFrame(frame);
-      },
-      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
-    );
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
 
-    observer.observe(container);
+    // Hide initially
+    path.style.strokeDasharray = "0 " + String(length);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    // Set initial state based on current scroll position
+    handleScroll();
 
     return () => {
-      observer.disconnect();
-      if (animFrameId) cancelAnimationFrame(animFrameId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
-  }, [duration]);
+  }, []);
 
   return (
     <svg

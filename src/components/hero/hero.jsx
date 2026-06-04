@@ -87,10 +87,10 @@ const Hero = () => {
           alt=""
           className="pointer-events-none absolute"
           style={{
-            width: "clamp(42px, 4vw, 75px)",
+            width: "clamp(42px, 14vw, 75px)",
             height: "auto",
-            top: "clamp(92px, 8vw, 140px)",
-            right: "clamp(16px, 5vw, 95px)",
+            top: "clamp(180px, 64vw, 180px)",
+            right: "clamp(16px, 15vw, 95px)",
           }}
         />
 
@@ -107,7 +107,7 @@ const Hero = () => {
       <div className="px-4 sm:px-8 lg:px-16 xl:px-0 mt-10 xl:mt-16">
         <div className="max-w-461 mx-auto">
           <div className="relative w-full aspect-1844/453">
-{/* pic-1: page(996,38) → rel(195,0) → top:43.05% left:0% */}
+            {/* pic-1: page(996,38) → rel(195,0) → top:43.05% left:0% */}
             <div
               className="hero-image-float absolute left-0 top-[43.05%] w-[12.255%] aspect-square"
               style={{ "--float-duration": "4s", "--float-delay": "0s" }}

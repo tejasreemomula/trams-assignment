@@ -90,7 +90,7 @@ const Features = () => {
                 <img
                   src={scribbleLine}
                   alt=""
-                  className="pointer-events-none absolute left-1/2 top-[0.97em]  h-auto w-[clamp(280px,48vw,260px)]  -translate-x-1/2 opacity-100 -z-10"
+                  className="pointer-events-none absolute left-1/2 top-[1.07em]  h-auto w-[clamp(280px,48vw,260px)]  -translate-x-1/2 opacity-100 -z-10"
                 />
               </span>{" "}
               should
