@@ -1,6 +1,8 @@
+import GreenPill from "../GreenPill";
 import featureImg from "../../assets/features/feature-img.png";
 import featureImg2 from "../../assets/features/features-img-2.png";
 import featureScribble from "../../assets/features/feature-scribble.svg";
+import featureScribble1 from "../../assets/features/feature-scribble-1.svg";
 import featureSquare from "../../assets/features/feature-square.svg";
 import featureTriangle from "../../assets/features/feature-triangle.svg";
 import scribbleLine from "../../assets/hero/scrible-line.svg";
@@ -46,11 +48,24 @@ const Features = () => {
             maxWidth: "100%",
           }}
         />
+        <img
+          src={featureScribble1}
+          alt=""
+          className="pointer-events-none absolute -right-50 z-[-1] opacity-100"
+          style={{
+            width: "clamp(400px, 76vw, 1440px)",
+            height: "clamp(200px, 34vw, 698px)",
+            maxWidth: "100%",
+            top: "clamp(500px, 40vw, 1800px)",
+            transform: "rotate(-3.88deg)",
+            transformOrigin: "center center",
+          }}
+        />
         <div
           className="flex flex-wrap items-center justify-between gap-12 xl:gap-12"
           style={{
             width: "100%",
-            maxWidth: "1599px",
+            maxWidth: "1499px",
             minHeight: "auto",
             marginBottom: "0px",
           }}
@@ -77,7 +92,15 @@ const Features = () => {
               </span>{" "}
               should
               <br />
-              be better than today
+              be better than{" "}
+              <span className="relative inline-block">
+                today
+                <GreenPill
+                  width="clamp(100px, 14vw, 240px)"
+                  height="clamp(28px, 4vw, 65px)"
+                  className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+                />
+              </span>
             </h2>
 
             <p
@@ -94,7 +117,7 @@ const Features = () => {
             style={{
               flex: "0 1 420px",
               maxWidth: "340px",
-              marginRight: "clamp(-4px, -0.5vw, 0px)",
+              transform: "translateX(clamp(140px, 0vw, 60px))",
             }}
           >
             <img
@@ -125,22 +148,22 @@ const Features = () => {
           }}
         >
           <div
-            className="relative ml-auto flex w-full shrink-0 justify-start xl:w-auto"
+            className="relative flex w-full shrink-0 justify-start xl:w-auto"
             style={{
               flex: "0 1 420px",
               maxWidth: "340px",
-              marginLeft: "clamp(-4px, -0.5vw, 0px)",
+              marginLeft: "clamp(-60px, -4vw, -12px)",
             }}
           >
             <img
               src={featureTriangle}
               alt=""
-              className="pointer-events-none absolute -bottom-1 left-55 z-20 h-auto w-[clamp(90px,8vw,160px)] opacity-100"
+              className="pointer-events-none absolute -bottom-2 left-35 z-20 h-auto w-[clamp(80px,7vw,140px)] opacity-100"
             />
             <img
               src={featureTriangle}
               alt=""
-              className="pointer-events-none absolute -top-2 left-2 z-10 h-auto w-[clamp(70px,8vw,130px)] opacity-100"
+              className="pointer-events-none absolute -top-3 left-1 z-10 h-auto w-[clamp(60px,6vw,110px)] opacity-100"
             />
 
             <img
@@ -160,14 +183,22 @@ const Features = () => {
             style={{
               maxWidth: "720px",
               minHeight: "220px",
-              marginRight: "clamp(-4px, -0.5vw, 0px)",
+              transform: "translateX(clamp(10px, 3vw, 60px))",
             }}
           >
             <h2
               className="font-gerbil text-[clamp(28px,3.3vw,56px)] leading-[1.1] text-black"
               style={{ maxWidth: "800px" }}
             >
-              See how we can
+              <span className="relative inline-block">
+                See
+                <GreenPill
+                  width="clamp(70px, 10vw, 180px)"
+                  height="clamp(28px, 4vw, 65px)"
+                  className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+                />
+              </span>{" "}
+              how we can
               <br />
               help you{" "}
               <span className="relative inline-block">

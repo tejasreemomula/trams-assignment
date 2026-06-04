@@ -1,3 +1,4 @@
+import GreenPill from "../GreenPill";
 import scribbleLine from "../../assets/hero/scrible-line.svg";
 import img1 from "../../assets/testimonals/img-1.png";
 import img2 from "../../assets/testimonals/img-2.png";
@@ -36,11 +37,19 @@ const Testimonials = () => {
           className="w-full"
           style={{ maxWidth: "685px", minHeight: "149px" }}
         >
-          <h2 className="font-gerbil text-[clamp(32px,3vw,56px)] leading-[1.18] tracking-tight text-black">
-            What our customer
+          <h2 className="font-gerbil text-[clamp(42px,18vw,66px)] leading-[1.18] tracking-tight text-black">
+            <span className="relative inline-block">
+              What
+              <GreenPill
+                width="clamp(80px, 12vw, 207px)"
+                height="clamp(28px, 4vw, 70px)"
+                className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+              />
+            </span>
+            &nbsp;our customer
             <br />
             <span className="relative inline-block">
-              About Us
+              says About Us
               <img
                 src={scribbleLine}
                 alt=""

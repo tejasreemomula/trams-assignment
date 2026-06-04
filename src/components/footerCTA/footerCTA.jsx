@@ -1,5 +1,7 @@
 import FooterNavColumn from "./footerNavColumn";
 import { footerNavSections } from "../../constants/data";
+import arrowscribble from "../../assets/footer/arrow-scribble.svg";
+import semicircle from "../../assets/footer/footer-semi-circle.svg";
 
 const FooterCTA = () => {
   return (
@@ -14,6 +16,24 @@ const FooterCTA = () => {
           minHeight: "clamp(420px, 72vw, 1297px)",
         }}
       >
+        <img
+          src={arrowscribble}
+          alt=""
+          className="pointer-events-none absolute left-124 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 opacity-100"
+        />
+
+        <img
+          src={arrowscribble}
+          alt=""
+          className="pointer-events-none absolute left-140 top-10 h-auto w-[clamp(60px,80vw,128px)] -translate-x-1/2 -translate-y-1/2 opacity-100"
+        />
+
+        <img
+          src={semicircle}
+          alt=""
+          className="pointer-events-none absolute -right-6 top-58  h-auto w-[clamp(60px,80vw,120px)] -translate-x-1/2 -translate-y-1/2 opacity-100"
+        />
+
         <div
           className="flex w-full flex-col items-center justify-start rounded-[100px]"
           style={{
@@ -83,6 +103,12 @@ const FooterCTA = () => {
           ))}
         </div>
       </div>
+      <p
+        className="mx-auto -mt-12 text-center font-satoshi text-[clamp(14px,1.4vw,12px)] leading-normal text-black"
+        style={{ maxWidth: "455px" }}
+      >
+        ©2023 Elementum. All rights reserved
+      </p>
     </section>
   );
 };

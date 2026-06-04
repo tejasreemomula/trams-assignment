@@ -1,3 +1,4 @@
+import GreenPill from "../GreenPill";
 import scribbleLine from "../../assets/hero/scrible-line.svg";
 import ServiceCard from "./serviceCard";
 
@@ -31,7 +32,15 @@ const Services = () => {
             className="font-gerbil text-[clamp(30px,3vw,56px)] leading-[1.04] text-black"
             style={{ maxWidth: "700px" }}
           >
-            What we can
+            What we{" "}
+            <span className="relative inline-block">
+              can
+              <GreenPill
+                width="clamp(100px, 8vw, 262px)"
+                height="clamp(48px, 2vw, 92px)"
+                className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+              />
+            </span>
             <br />
             <span className="relative inline-block">
               offer

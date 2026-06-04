@@ -21,7 +21,7 @@ const Header = () => {
           <a
             key={link}
             href={`#${link.toLowerCase()}`}
-            className="font-satoshi font-medium text-[18px] leading-[24px] text-black hover:text-gray-600 transition-colors duration-200 whitespace-nowrap"
+            className="font-satoshi font-medium text-[14px] leading-[24px] text-black hover:text-gray-600 transition-colors duration-200 whitespace-nowrap"
           >
             {link}
           </a>

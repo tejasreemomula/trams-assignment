@@ -1,5 +1,4 @@
-import openingComma from "../../assets/testimonals/opening-comma.svg";
-import closingComma from "../../assets/testimonals/closing-comma.svg";
+import invertedComma from "../../assets/testimonals/inverted-comma.png";
 
 const TestimonialCard = () => {
   return (
@@ -11,29 +10,49 @@ const TestimonialCard = () => {
         background: "rgba(215, 238, 221, 0.30)",
       }}
     >
-      <img
-        src={openingComma}
-        alt=""
-        className="pointer-events-none absolute left-3 top-3 z-20 h-auto w-[clamp(32px,5vw,58px)] opacity-100"
-      />
-      <img
-        src={closingComma}
-        alt=""
-        className="pointer-events-none absolute bottom-3 right-3 z-20 h-auto w-[clamp(32px,5vw,58px)] opacity-100"
-      />
-      <p
-        className="font-satoshi text-[clamp(14px,1.8vw,24px)] leading-[1.35] text-black"
+      <div
+        className="relative mx-auto"
         style={{
           maxWidth: "clamp(260px, 52vw, 703px)",
-          textAlign: "center",
         }}
       >
-        Elementum delivered the site within the timeline they requested. In the
-        end, the client found a 50% increase in traffic within days since its
-        launch. They also had an impressive ability to use technologies that the
-        company hasn’t used, which have also proven to be easy to use and
-        reliable.
-      </p>
+        {/* Top-left opening double-quote */}
+        <img
+          src={invertedComma}
+          alt=""
+          className="pointer-events-none absolute -left-8 -top-8 h-auto w-[clamp(20px, 2.5vw, 42px)] opacity-60"
+        />
+        <img
+          src={invertedComma}
+          alt=""
+          className="pointer-events-none absolute -left-3 -top-8 h-auto w-[clamp(20px, 2.5vw, 42px)] opacity-60"
+        />
+
+        {/* Bottom-right closing double-quote (rotated) */}
+        <img
+          src={invertedComma}
+          alt=""
+          className="pointer-events-none absolute -bottom-8 -right-8 h-auto w-[clamp(20px, 2.5vw, 42px)] rotate-180 opacity-60"
+        />
+        <img
+          src={invertedComma}
+          alt=""
+          className="pointer-events-none absolute -bottom-8 -right-3 h-auto w-[clamp(20px, 2.5vw, 42px)] rotate-180 opacity-60"
+        />
+
+        <p
+          className="font-satoshi text-[clamp(14px,1.8vw,24px)] leading-[1.35] text-black"
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Elementum delivered the site within the timeline they requested. In
+          the end, the client found a 50% increase in traffic within days since
+          its launch. They also had an impressive ability to use technologies
+          that the company hasn’t used, which have also proven to be easy to use
+          and reliable.
+        </p>
+      </div>
     </article>
   );
 };

@@ -1,3 +1,5 @@
+import serviceArrow from "../../assets/services/service-arrow.svg";
+
 const ServiceCard = ({ eyebrow, title }) => {
   return (
     <article className="w-full">
@@ -22,6 +24,12 @@ const ServiceCard = ({ eyebrow, title }) => {
             {title}
           </h3>
         </div>
+
+        <img
+          src={serviceArrow}
+          alt=""
+          className="pointer-events-none h-auto w-[clamp(40px,5vw,82px)] shrink-0 self-end lg:self-center right-0"
+        />
       </div>
       <div
         className="mx-auto h-px w-full bg-[#B1B1B1]"
