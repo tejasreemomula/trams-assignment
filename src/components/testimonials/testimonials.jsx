@@ -37,7 +37,7 @@ const Testimonials = () => {
           className="w-full"
           style={{ maxWidth: "685px", minHeight: "149px" }}
         >
-          <h2 className="font-gerbil text-[clamp(42px,18vw,66px)] leading-[1.18] tracking-tight text-black">
+          <h2 className="font-gerbil text-[clamp(32px,8vw,48px)] leading-[1.18] text-black">
             <span className="relative inline-block">
               What
               <GreenPill
@@ -61,7 +61,10 @@ const Testimonials = () => {
 
         <div
           className="relative mt-6 w-full"
-          style={{ maxWidth: "1844px", minHeight: "653px" }}
+          style={{
+            maxWidth: "1844px",
+            minHeight: "clamp(400px, 38vw, 560px)",
+          }}
         >
           {imageStyles.map((item, index) => (
             <img

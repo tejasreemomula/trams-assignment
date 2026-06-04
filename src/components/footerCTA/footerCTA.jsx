@@ -6,7 +6,7 @@ import semicircle from "../../assets/footer/footer-semi-circle.svg";
 const FooterCTA = () => {
   return (
     <section
-      className="relative w-full overflow-hidden py-12 md:py-16 lg:py-10"
+      className="relative w-full overflow-hidden py-8 md:py-10 lg:py-8"
       style={{ background: "#D7EEDD" }}
     >
       <div

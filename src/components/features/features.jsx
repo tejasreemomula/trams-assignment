@@ -41,11 +41,11 @@ const Features = () => {
         <img
           src={featureScribble}
           alt=""
-          className="pointer-events-none absolute left-160 top-126 z-[-1] -translate-x-1/2 -translate-y-1/2 opacity-100"
+          className="pointer-events-none absolute left-195 top-114 z-[-1] -translate-x-1/2 -translate-y-1/2 opacity-100"
           style={{
-            width: "909.8696113009998px",
-            height: "297.5963049470697px",
-            maxWidth: "100%",
+            width: "949px",
+            height: "auto",
+            maxWidth: "none",
           }}
         />
         <img
@@ -117,7 +117,8 @@ const Features = () => {
             style={{
               flex: "0 1 420px",
               maxWidth: "340px",
-              transform: "translateX(clamp(140px, 0vw, 60px))",
+              marginRight: "clamp(-8px, 6vw, 34px)",
+              transform: "translateX(clamp(36px, 8vw, 92px))",
             }}
           >
             <img
@@ -144,7 +145,7 @@ const Features = () => {
             width: "100%",
             maxWidth: "1596px",
             minHeight: "auto",
-            marginTop: "0px",
+            marginTop: "clamp(44px, 7vw, 72px)",
           }}
         >
           <div
@@ -152,7 +153,6 @@ const Features = () => {
             style={{
               flex: "0 1 420px",
               maxWidth: "340px",
-              marginLeft: "clamp(-60px, -4vw, -12px)",
             }}
           >
             <img
@@ -181,9 +181,10 @@ const Features = () => {
           <div
             className="min-w-0 flex-1 basis-[320px]"
             style={{
+              width: "min(720px, 100%)",
               maxWidth: "720px",
               minHeight: "220px",
-              transform: "translateX(clamp(10px, 3vw, 60px))",
+              transform: "translateX(clamp(70px, 80vw, 140px))",
             }}
           >
             <h2

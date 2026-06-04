@@ -9,6 +9,7 @@ import pic5 from "../../assets/hero/pic-5.png";
 import pic6 from "../../assets/hero/pic-6.png";
 import pic7 from "../../assets/hero/pic-7.png";
 import pic8 from "../../assets/hero/pic-8.png";
+import GreenPill from "../GreenPill";
 
 const Hero = () => {
   return (
@@ -29,7 +30,16 @@ const Hero = () => {
           <br />
           doers were changing
           <br />
-          the status Quo with
+          the{" "}
+          <span className="relative inline-block">
+            status
+            <GreenPill
+              width="clamp(120px, 16vw, 260px)"
+              height="clamp(42px, 6vw, 92px)"
+              className="left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+            />
+          </span>{" "}
+          Quo with
         </h1>
 
         <img
