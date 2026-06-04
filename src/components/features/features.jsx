@@ -32,8 +32,8 @@ const Features = () => {
         style={{
           width: "100%",
           maxWidth: "1599px",
-          minHeight: "1370px",
-          gap: "clamp(0px, 0vw, 0px)",
+          minHeight: "auto",
+          gap: "clamp(24px, 4vw, 64px)",
         }}
       >
         <img
@@ -51,7 +51,7 @@ const Features = () => {
           style={{
             width: "100%",
             maxWidth: "1599px",
-            minHeight: "420px",
+            minHeight: "auto",
             marginBottom: "0px",
           }}
         >
@@ -120,8 +120,8 @@ const Features = () => {
           style={{
             width: "100%",
             maxWidth: "1596px",
-            minHeight: "560px",
-            marginTop: "-60px",
+            minHeight: "auto",
+            marginTop: "0px",
           }}
         >
           <div
