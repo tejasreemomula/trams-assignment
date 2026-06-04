@@ -45,35 +45,67 @@ const Hero = () => {
           <div className="relative w-full aspect-1844/453">
             {/* pic-1: page(996,38) → rel(195,0) → top:43.05% left:0% */}
             <div className="absolute left-0 top-[43.05%] w-[12.255%] aspect-square">
-              <img src={pic1} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic1}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-2: page(940,199) → rel(139,161) → top:30.68% left:8.73% */}
             <div className="absolute left-[8.73%] top-[30.68%] w-[12.255%] aspect-square">
-              <img src={pic2} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic2}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-3: page(801,553) → rel(0,515) → top:0% left:27.93% */}
             <div className="absolute left-[27.93%] top-0 w-[12.255%] aspect-square">
-              <img src={pic3} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic3}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-4: page(1027,677) → rel(226,639) → top:49.89% left:34.65% */}
             <div className="absolute left-[34.65%] top-[49.89%] w-[12.255%] aspect-square">
-              <img src={pic4} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic4}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-5: page(856,977) → rel(55,939) → top:12.14% left:50.92% */}
             <div className="absolute left-[50.92%] top-[12.14%] w-[12.201%] aspect-square">
-              <img src={pic5} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic5}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-6: page(940,1144) → rel(139,1106) → top:30.68% left:59.98% */}
             <div className="absolute left-[59.98%] top-[30.68%] w-[12.255%] aspect-square">
-              <img src={pic6} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic6}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-7: page(801,1414) → rel(0,1376) → top:0% left:74.62% */}
             <div className="absolute left-[74.62%] top-0 w-[12.255%] aspect-square">
-              <img src={pic7} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic7}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             {/* pic-8: page(960,1656) → rel(159,1618) → top:35.10% left:87.74% */}
             <div className="absolute left-[87.74%] top-[35.10%] w-[12.255%] aspect-square">
-              <img src={pic8} alt="" className="w-full h-full object-cover rounded-lg" />
+              <img
+                src={pic8}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
