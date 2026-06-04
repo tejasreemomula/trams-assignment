@@ -10,17 +10,17 @@ import pic8 from "../../assets/hero/pic-8.png";
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-[400px] relative bg-white overflow-hidden pb-12 sm:pb-16 xl:pb-20">
+    <section className="w-full min-h-100 relative bg-white overflow-hidden pb-12 sm:pb-16 xl:pb-20">
       {/* Centered text content with responsive padding */}
-      <div className="flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-[308px] pt-12 xl:pt-16">
-        <h1 className="font-gerbil font-normal text-[36px] sm:text-[48px] md:text-[64px] lg:text-[64px] xl:text-[100px] leading-[1.26] tracking-normal max-w-[1332px]">
+      <div className="flex flex-col items-center text-center px-4 sm:px-8 lg:px-16 xl:px-77 pt-12 xl:pt-16">
+        <h1 className="font-gerbil font-normal text-[36px] sm:text-[48px] md:text-[64px] lg:text-[64px] xl:text-[100px] leading-[1.26] tracking-normal max-w-333">
           The{" "}
           <span className="relative z-10">
             thinkers
             <img
               src={scribbleLine}
               alt=""
-              className="absolute left-1/2 -translate-x-1/2 top-[1.1em] -z-10 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[594px] h-auto"
+              className="absolute left-1/2 -translate-x-1/2 top-[1.1em] -z-10 w-50 sm:w-75 md:w-100 lg:w-125 xl:w-148.5 h-auto"
             />
           </span>{" "}
           and
@@ -30,7 +30,7 @@ const Hero = () => {
           the status Quo with
         </h1>
 
-        <p className="font-satoshi font-normal text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-[1.5] max-w-[831px] mt-6 xl:mt-8">
+        <p className="font-satoshi font-normal text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-normal max-w-207.75 mt-6 xl:mt-8">
           We are a team of strategists, designers communicators, researchers.
           Togeather,
           <br />
@@ -41,8 +41,8 @@ const Hero = () => {
 
       {/* Image container - proportional absolute positioning (scales responsively) */}
       <div className="px-4 sm:px-8 lg:px-16 xl:px-0 mt-10 xl:mt-16">
-        <div className="max-w-[1844px] mx-auto">
-          <div className="relative w-full aspect-[1844/453]">
+        <div className="max-w-461 mx-auto">
+          <div className="relative w-full aspect-1844/453">
             {/* pic-1: page(996,38) → rel(195,0) → top:43.05% left:0% */}
             <div className="absolute left-0 top-[43.05%] w-[12.255%] aspect-square">
               <img src={pic1} alt="" className="w-full h-full object-cover rounded-lg" />
